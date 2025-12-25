@@ -12,3 +12,12 @@ python = "^3.12"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+exclude = ["scripts", "docs", "test"]
+disable_error_code = ["name-defined"]
+explicit_package_bases = true
