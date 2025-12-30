@@ -31,7 +31,7 @@ jobs:
 
       - name: Install project dependencies
         if: steps.cached-poetry-deps.outputs.cache-hit != 'true'
-        run: poetry install --with dev
+        run: poetry install --no-root
 
       - name: Run mypy (type checking)
         run: poetry run mypy src/
