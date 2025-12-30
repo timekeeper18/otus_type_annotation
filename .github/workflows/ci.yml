@@ -34,5 +34,5 @@ jobs:
         run: poetry install --no-root
 
       - name: Run mypy (type checking)
-        run: poetry run mypy src/
+        run: poetry run mypy .
 
